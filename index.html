@@ -12,6 +12,25 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+        nav {
+            background-color: #444;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
         header {
             background-color: #333;
             color: white;
@@ -22,12 +41,26 @@
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
+            padding-bottom: 6rem;
         }
         section {
             background-color: white;
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .service-card {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            border-radius: 3px;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -38,16 +71,64 @@
             bottom: 0;
             width: 100%;
         }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>Welcome to MCP</h1>
     </header>
     <main>
-        <section>
+        <section id="about">
             <h2>About Us</h2>
-            <p>Welcome to our simple webpage. This is just the beginning!</p>
+            <p>Welcome to our company website. We are dedicated to providing excellent service and innovative solutions to our clients.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Service 1</h3>
+                    <p>Description of our first amazing service offering.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service 2</h3>
+                    <p>Description of our second amazing service offering.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service 3</h3>
+                    <p>Description of our third amazing service offering.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div>
+                    <h3>Address</h3>
+                    <p>123 Business Street<br>City, State 12345</p>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>contact@mcpcompany.com</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
